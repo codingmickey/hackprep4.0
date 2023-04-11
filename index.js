@@ -1,7 +1,10 @@
+// Description: This is the main file of the API
+
+// Importing the express module
 const express = require('express');
 const app = express();
 
-//
+// Array of finances
 let finances = [
   {
     // Name of the transaction
@@ -26,6 +29,7 @@ let finances = [
 
 // Ignore (for now, ask me later if you want to know)
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Root route
 app.get('/', (req, res) => {
