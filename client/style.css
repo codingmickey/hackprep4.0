@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #010101;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type='text'],
+input[type='number'],
+select {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input#add-expense {
+  padding: 10px;
+  background-color: #4da842;
+  color: #010101;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input#add-expense:hover {
+  background-color: #407a3a;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+li span {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  /* margin: 0 0 1rem 0; */
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #5299d3;
+  border-bottom: 2px solid #ccc;
+  font-weight: bold;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+}
+
+td.amount {
+  text-align: right;
+}
+
+td.date {
+  font-style: italic;
+}
+
+tr:nth-child(odd) {
+  background-color: #ccc;
+  color: #000;
+}
+
+.delete-icon:hover {
+  color: #fa8334;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: rgb(123, 240, 255);
+  cursor: pointer;
+}
