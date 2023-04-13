@@ -41,40 +41,6 @@ app.get('/finances', (req, res) => {
   res.send(finances);
 });
 
-// Get a single finance
-app.get('/finances/:id', (req, res) => {
-  let id = req.params.id;
-  let finance = finances.find((finance) => finance.id == id);
-  res.send(finance);
-});
-
-// Add a finance
-app.post('/finances', (req, res) => {
-  let finance = req.body;
-  finances.push(finance);
-  res.send('Added');
-});
-
-// Update a finance
-app.put('/finances/:id', (req, res) => {
-  let id = req.params.id;
-  let finance = finances.find((finance) => finance.id == id);
-  finance.name = req.body.name;
-  finance.category = req.body.category;
-  finance.date = req.body.date;
-  finance.amount = req.body.amount;
-  res.send('Updated');
-});
-
-// Delete a finance
-app.delete('/finances/:id', (req, res) => {
-  let id = req.params.id;
-  let finance = finances.find((finance) => finance.id == id);
-  let index = finances.indexOf(finance);
-  finances.splice(index, 1);
-  res.send('Deleted');
-});
-
 app.listen(5000, () => {
   console.log('Server Listening on port 5000');
 });
