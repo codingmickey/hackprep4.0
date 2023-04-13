@@ -55,26 +55,6 @@ app.post('/finances', (req, res) => {
   res.send('Added');
 });
 
-// Update a finance
-app.put('/finances/:id', (req, res) => {
-  let id = req.params.id;
-  let finance = finances.find((finance) => finance.id == id);
-  finance.name = req.body.name;
-  finance.category = req.body.category;
-  finance.date = req.body.date;
-  finance.amount = req.body.amount;
-  res.send('Updated');
-});
-
-// Delete a finance
-app.delete('/finances/:id', (req, res) => {
-  let id = req.params.id;
-  let finance = finances.find((finance) => finance.id == id);
-  let index = finances.indexOf(finance);
-  finances.splice(index, 1);
-  res.send('Deleted');
-});
-
 app.listen(5000, () => {
   console.log('Server Listening on port 5000');
 });
