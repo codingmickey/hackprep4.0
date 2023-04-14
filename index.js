@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 app.put('/expenses', (req, res) => {
   let id = req.body.id;
   let expense = expenses.find((expense) => expense.id == id);
-  expense.name = req.body.name;
+  expense.title = req.body.title;
   expense.date = req.body.date;
   expense.amount = req.body.amount;
   res.send('Updated');
